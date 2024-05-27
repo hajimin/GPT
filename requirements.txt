@@ -1,8 +1,5 @@
-time
 openai
 requests
 HTTPAdapter
 PoolManager
 urllib3
-os
-stremalit
