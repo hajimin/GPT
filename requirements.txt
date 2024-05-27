@@ -1,5 +1,4 @@
 openai
 requests
 HTTPAdapter
-PoolManager
 urllib3
