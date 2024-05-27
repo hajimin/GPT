@@ -23,7 +23,7 @@ session = requests.Session()
 session.mount('https://', SSLAdapter())
 
 # 환경 변수에서 API 키 가져오기
-api_key = os.getenv("OPENAI_API_KEY")
+api_key = st.secrets['OPENAPI_KEY']
 organization_id = 'org-iPpZEE3rIksM58FU6N4dOXoy'
 assistant_id = 'asst_gSo5oyon5bH785Wcw59V2obe'
 
