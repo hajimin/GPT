@@ -1,13 +1,13 @@
 import time
 from openai import OpenAI
 import streamlit as st
-import os
+
 # 환경 변수에서 API 키 가져오기
 
 # api_key =
 assistant_id = 'asst_gSo5oyon5bH785Wcw59V2obe'
 # thread_id ='thread_1Z7KpB8QN7zGzlVAF1mLuO1s'
-openai_api_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = st.secrets['OPENAPI_KEY']
 client = OpenAI(api_key=openai_api_key)
 # assistant_id = 'asst_gSo5oyon5bH785Wcw59V2obe'
 
