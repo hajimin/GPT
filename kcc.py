@@ -66,7 +66,7 @@ if prompt := st.chat_input():
     # print(thread_messsage.data)
     msg = thread_messsage.data[0].content[0].text.value
 
-    st.session_state.messages.append({"role": "user", "content": msg})
+    st.session_state.messages.append({"role": "assisant", "content": msg})
     st.chat_message("assistant").write(msg)
 
 
