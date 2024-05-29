@@ -2,14 +2,10 @@ import time
 from openai import OpenAI
 import streamlit as st
 
-# 환경 변수에서 API 키 가져오기
 
-# api_key =
 assistant_id = 'asst_gSo5oyon5bH785Wcw59V2obe'
-# thread_id ='thread_1Z7KpB8QN7zGzlVAF1mLuO1s'
 openai_api_key = st.secrets['OPENAPI_KEY']
 client = OpenAI(api_key=openai_api_key)
-# assistant_id = 'asst_gSo5oyon5bH785Wcw59V2obe'
 
 st.title("KCC글라스 사내 챗봇")
 st.caption("LLM-GPT-3.5-TURBO")
@@ -46,8 +42,6 @@ if prompt := st.chat_input():
         thread_id=thread_id,
         assistant_id=assistant_id
     )
-    # print(run)
-
     run_id = run.id
 
     while True:
@@ -63,7 +57,6 @@ if prompt := st.chat_input():
         print(run)
 
     thread_messsage = client.beta.threads.messages.list(thread_id)
-    # print(thread_messsage.data)
     msg = thread_messsage.data[0].content[0].text.value
 
     st.session_state.messages.append({"role": "assisant", "content": msg})
