@@ -53,12 +53,13 @@ if prompt := st.chat_input():
         if run.status == "completed":
             break
         else:
-            time.sleep(15)
+            time.sleep(20)
+            break
         print(run)
 
     thread_messsage = client.beta.threads.messages.list(thread_id)
     msg = thread_messsage.data[0].content[0].text.value
-
+    time.sleep(10)
     st.session_state.messages.append({"role": "assisant", "content": msg})
     st.chat_message("assistant").write(msg)
 
