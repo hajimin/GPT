@@ -35,7 +35,7 @@ if prompt := st.chat_input():
     response = client.beta.threads.messages.create(
         thread_id,
         role="user",
-        content=prompt+" 한국어로 번역한 뒤 요약해서 말해줘",
+        content=prompt+" 한국어로 요약해서 말해줘",
     )
     print(response)
 
