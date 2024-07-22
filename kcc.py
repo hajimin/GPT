@@ -14,7 +14,7 @@ thread = client.beta.threads.create()
 thread_id = thread.id
 
 if "messages" not in st.session_state:
-    st.session_state["messages"]=[{"role":"assistant","content":"안녕하세요, KCC글라스 챗봇입니다. 무엇을 도와드릴까요?"}]
+    st.session_state["messages"]=[{"role":"assistant","content":"안녕하세요, KCC글라스 사내규정 챗봇입니다. 무엇을 도와드릴까요?"}]
     # st.info("ex) 의료비지원규칙에 대해 요약해서 말해줘")
 
 for msg in st.session_state.messages:
