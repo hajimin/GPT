@@ -7,7 +7,7 @@ assistant_id = 'asst_gSo5oyon5bH785Wcw59V2obe'
 openai_api_key = st.secrets['OPENAPI_KEY']
 client = OpenAI(api_key=openai_api_key)
 
-st.title("KCC글라스 사내 챗봇")
+st.title("KCC글라스 사내규정 챗봇")
 st.caption("LLM-GPT-3.5-TURBO")
 
 thread = client.beta.threads.create()
