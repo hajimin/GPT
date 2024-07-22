@@ -15,8 +15,10 @@ thread_id = thread.id
 
 if "messages" not in st.session_state:
     st.session_state["messages"]=[{"role":"assistant","content":"안녕하세요, KCC글라스 사내규정 챗봇입니다. 무엇을 도와드릴까요?"}]
-    st.info("※ 간결하지만 구체적으로 질문해주세요. 출장규정 알려줘 > 국내 출장 여비 알려줘  ")
-    st.info("※ 사용자가 많을 경우 답변이 느려질 수 있습니다.")
+    st.info(":grey_exclamation: 사용자가 많을 경우 답변이 느려질 수 있습니다.")
+    st.text("※ 간결하지만 구체적으로 질문해주세요. ex) 출장규정 알려줘 > 국내 출장 여비 알려줘  ")
+    data ='''사내규정 URL >> http://manual.kccworld.info/kccrules2/usermaintype.do'''
+    st.markdown(data)
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
